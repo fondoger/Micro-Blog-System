@@ -4,8 +4,8 @@ from django.http import HttpResponse
 import sqlite3
 from datetime import datetime
 from dateutil import tz
-from tzlocal import get_localzone
 from typing import List
+import pytz
 
 cursor = None
 
@@ -29,11 +29,10 @@ class Post:
 
     @property
     def local_time(self):
-        from_zone = tz.tzutc()
-        to_zone = tz.get_localzone()
         utc = datetime.strptime(self.timestamp, "%Y-%m-%d %H:%M:%S.%f")
-        utc = utc.replace(tzinfo=from_zone)
-        local = utc.astimezone(to_zone)
+        utc = utc.replace(tzinfo=tz.tzutc())
+        localtz = pytz.timezone("Asia/Shanghai")
+        local = utc.astimezone(localtz)
         return local.strftime("%Y-%m-%d %H:%M")
 
 
