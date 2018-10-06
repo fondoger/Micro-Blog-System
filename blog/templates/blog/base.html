@@ -3,7 +3,9 @@
 <html itemscope itemtype="http://schema.org/WebPage">
     <head>
         <meta charset="UTF-8">
+        {% block title %}
         <title>掌上BUAA(手机版)</title>
+        {% endblock %}
         <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
         <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <meta name="format-detection" content="telephone=no">
@@ -14,7 +16,7 @@ http://m.douban.com/">
         
     </head>
     <body ontouchstart="">
-        
+        {% block body %}
     
         <div id="TalionNav">
             <header class="TalionNav">
@@ -38,5 +40,7 @@ http://m.douban.com/">
 		<div class="page">
 		{% block page %}{% endblock %}
 		</div>
+
+        {% endblock %}
     </body>
 </html>
