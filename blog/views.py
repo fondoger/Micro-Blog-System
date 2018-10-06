@@ -19,7 +19,7 @@ class Post:
         return "<Post: %r>" % self.id
     @property
     def abstract(self):
-        return self.text[:60]
+        return self.text[:120]
     @property
     def text_lines(self):
         return self.text.split("\n")
