@@ -77,12 +77,13 @@ cursor.execute("DELETE FROM posts where id=1")
 
 ```
 
+
 功能截图
 -------
 
 ![](https://github.com/fondoger/Micro-Blog-System/raw/master/screenshots/together.jpg)
 
-
+更多截图文件保存在`screenshots`目录下。
 
 
 
