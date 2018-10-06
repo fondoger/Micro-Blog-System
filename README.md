@@ -24,7 +24,8 @@
 数据库表的定义
 ------
 
-tablename: posts
+Table Name: posts
+
 | column | type | info | description |
 |---|---|---|---|
 |  id | INTEGER | primary key | Post's id |
@@ -32,7 +33,8 @@ tablename: posts
 | text | TEXT | | Post's text content |
 | timestamp | TEXT | | Post's create date time |
 
-SQL commands:
+SQL commands to create table:
+
 ```
 CREATE TABLE posts (
     id INTEGER PRIMARY KEY,
@@ -78,8 +80,7 @@ cursor.execute("DELETE FROM posts where id=1")
 功能截图
 -------
 
-
-
+![](https://github.com/fondoger/Micro-Blog-System/raw/master/screenshots/together.jpg)
 
 
 
