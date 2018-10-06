@@ -4,6 +4,7 @@ from django.http import HttpResponse
 import sqlite3
 from datetime import datetime
 from dateutil import tz
+from tzlocal import get_localzone
 from typing import List
 
 cursor = None
@@ -17,16 +18,19 @@ class Post:
         self.timestamp = timestamp
     def __repr__(self):
         return "<Post: %r>" % self.id
+
     @property
     def abstract(self):
         return self.text[:120]
+
     @property
     def text_lines(self):
         return self.text.split("\n")
+
     @property
     def local_time(self):
         from_zone = tz.tzutc()
-        to_zone = tz.tzlocal()
+        to_zone = tz.get_localzone()
         utc = datetime.strptime(self.timestamp, "%Y-%m-%d %H:%M:%S.%f")
         utc = utc.replace(tzinfo=from_zone)
         local = utc.astimezone(to_zone)
