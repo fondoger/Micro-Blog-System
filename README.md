@@ -29,7 +29,7 @@ Table Name: posts
 | column | type | info | description |
 |---|---|---|---|
 |  id | INTEGER | primary key | Post's id |
-| title | TEXT |  | Post's titil |
+| title | TEXT |  | Post's title |
 | text | TEXT | | Post's text content |
 | timestamp | TEXT | | Post's create date time |
 
