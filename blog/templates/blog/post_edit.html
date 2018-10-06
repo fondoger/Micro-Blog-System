@@ -1,28 +1,15 @@
+{% extends "blog/base.html" %}
 {% load static %}
-<!DOCTYPE html>
 {# Variables: post #}
 
-<html itemscope itmetype="http://schema.org/WeiPage">
-	<head>
-        <meta charset="UTF-8">
-        <title>编辑帖子</title>
-        <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
-        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-        <meta name="format-detection" content="telephone=no">
-        <link rel="canonical" href="
-http://m.douban.com/">
-        <link href="{% static 'blog/post_edit.css' %}" rel="stylesheet">
-	</head>
+{% block title %}
+<title>编辑帖子</title>
+{% endblock %}
+{% block head %}
+<link href="{% static 'blog/post_edit.css' %}" rel="stylesheet">
+{% endblock %}
 
-
-<body ontouchstart="">
-
-{% comment %}
-<script src="https://img3.doubanio.com/f/talion/ee8e0c54293aefb5709ececbdf082f8091ad5e49/js/card/zepto.min.js"></script>
-<script src="https://img3.doubanio.com/f/talion/88fc2b21c8dda5c93aa4c011eb15b74f8850978f/js/lib/react/15.3.0/react-all.min.js"></script>
-<script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/487e486f776e1004.js"></script>
-{% endcomment %}
-
+{% block body %}
 <div id="pop-page_1">
     <div data-reactroot="" class="pop-page show status-editor">
     <!-- react-empty: 2 -->
@@ -52,11 +39,11 @@ http://m.douban.com/">
 
 
 <div>
-	<div data-reactroot="" class="pop-page-header header show">
-		<span class="title">编辑帖子</span>
+    <div data-reactroot="" class="pop-page-header header show">
+        <span class="title">编辑帖子</span>
         <a class="btn btn-left " style="text-decoration:none" href="{{ request.META.HTTP_REFERER }}">取消</a>
-		<div class="btn btn-right disable" id="submitButton">发布</div>
-	</div>
+        <div class="btn btn-right disable" id="submitButton">发布</div>
+    </div>
 </div>
 
 <form action="{{ request.path }}" method="post" id="myForm">
@@ -90,5 +77,4 @@ http://m.douban.com/">
     textInput.addEventListener('input', onChangeText);
 
 </script>
-
-</body>
+{% endblock %}
