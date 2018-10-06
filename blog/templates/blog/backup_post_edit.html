@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html itemscope itmetype="http://schema.org/WeiPage">
+	<head>
+        <meta charset="UTF-8">
+        <title>编辑帖子</title>
+        <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="canonical" href="
+http://m.douban.com/">
+        <link href="{% static 'blog/edit_post.css' %}" rel="stylesheet">
+	</head>
+
+
+<body ontouchstart="">
+
+<script src="https://img3.doubanio.com/f/talion/ee8e0c54293aefb5709ececbdf082f8091ad5e49/js/card/zepto.min.js"></script>
+<script src="https://img3.doubanio.com/f/talion/88fc2b21c8dda5c93aa4c011eb15b74f8850978f/js/lib/react/15.3.0/react-all.min.js"></script>
+<script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/487e486f776e1004.js"></script>
+
+<div id="pop-page_1">
+    <div data-reactroot="" class="pop-page show status-editor">
+    <!-- react-empty: 2 -->
+
+        <div class="content">
+            <div class="editor-wrapper">
+                <div contenteditable="true" class="editor" placeholder="分享生活点滴...">
+                </div>
+            </div>
+            <!-- react-empty: 6 -->
+            <div class="info-bar">
+                <div class="btn btn-camera">
+                    <input type="file" accept="image/*" name="image" multiple="">
+                </div>
+                <div class="btn btn-at"></div>
+                <div class="btn btn-hash"></div>
+                <div class="num ">140</div>
+            </div>
+            <!-- react-empty: 13 -->
+        </div>{# content #}
+
+    </div>
+</div>{# pop-page_1#}
+
+<div>
+	<div data-reactroot="" class="pop-page-header header show">
+		<span class="title">编辑帖子</span>
+		<div class="btn btn-left ">取消</div>
+		<div class="btn btn-right disable">发布</div>
+	</div>
+</div>
+
+</body>

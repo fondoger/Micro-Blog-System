@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage">
+    <head>
+        <meta charset="UTF-8">
+        <title>掌上BUAA(手机版)</title>
+        <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw" />
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="canonical" href="
+http://m.douban.com/">
+        <link href="{% static 'blog/base.css' %}" rel="stylesheet">
+        {% block head %}{% endblock %}
+        
+    </head>
+    <body ontouchstart="">
+        
+    
+        <div id="TalionNav">
+            <header class="TalionNav">
+                <div class="TalionNav-primary">
+                    <a href="/blog"><h1>BUAA</h1></a>
+                    <nav><ul>
+                        <li><a href="/blog/post/edit" style="color: #EA4335;">新帖子</a></li>
+                        {% comment %}
+                        <li><a href="/movie" style="color: #2384E8;">电影</a></li>
+                        <li><a href="/book" style="color: #9F7860;">图书</a></li>
+                        <li><a href="/status" style="color: #E4A813;">广播</a></li>
+                        <li><a href="/group" style="color: #2AB8CC;">小组</a></li>
+                        {% endcomment %}
+                    </ul><span class=""></span>
+                    </nav>
+
+                </div>
+
+            </header>
+        </div>
+		<div class="page">
+		{% block page %}{% endblock %}
+		</div>
+    </body>
+</html>

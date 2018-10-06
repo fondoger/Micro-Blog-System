@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{# Variables: post #}
+
+{% block head %}
+<link href="{% static 'blog/post.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block page %}
+<div class="card">
+
+
+<section class="header">
+    <h1 class="title">{{ post.title }}</h1>
+    <div class="user-title">
+        <span class="info"><span class="timestamp">{{ post.local_time }}</span></span>
+    </div>
+</section>
+
+<section class="note-content paper">
+    <div class="note-body" id="note-body">
+        <div id="content">
+            {% for line in post.text_lines %}
+                <p>{{ line }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<div style="margin-bottom: 24px">
+<span>
+    {# TODO: change to POST instead of GET #}
+    <a href="edit/{{ post.id }}" style="margin-right: 8px">编辑</a>
+    <a href="delete/{{ post.id }}" style="margin-right: 8px">删除</a>
+</span>
+</div>
+
+</div>{# card #}
+{% endblock %}
