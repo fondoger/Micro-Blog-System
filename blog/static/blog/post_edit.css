@@ -1728,7 +1728,8 @@ footer .Advertisement {
     outline: none;
     overflow-x: hidden;
     overflow-y: auto;
-    white-space: pre-wrap
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .status-editor .editor-wrapper .editor,.status-editor .editor-wrapper .editor * {
